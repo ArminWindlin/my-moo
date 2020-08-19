@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve:client": "cd client && npm run serve",
+    "serve:server": "cd server && npm run serve",
+    "serve": "npm-run-all -l -p serve:client serve:server"
   },
-  "author": "Armin, Marc",
+  "author": "Armin Windlin, Marc Knipp",
   "license": "ISC"
 }
