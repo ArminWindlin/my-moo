@@ -1,3 +1,3 @@
 # my moo
 
-![moo](https://cdn3.iconfinder.com/data/icons/animals-49/100/cow-happy-face-animals-512.png)
+![moo](https://image.jimcdn.com/app/cms/image/transf/dimension=202x10000:format=png/path/s139f0810ea538a4c/image/i416672e155bf41d0/version/1477417549/image.png)
