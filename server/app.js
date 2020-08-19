@@ -7,7 +7,7 @@ const app = express();
 const port = 3000;
 
 // Setup database connection
-mongoose.connect('mongodb://localhost/bananas',
+mongoose.connect('mongodb://localhost/my-moo',
     { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
 
 // Middleware

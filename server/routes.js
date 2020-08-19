@@ -1,13 +1,13 @@
-const banana = require('./controller/bananaC');
+const cow = require('./controller/cowC');
 
 exports.routes = (app) => {
 
-    app.route('/banana')
-    .get(banana.getBananas)
-    .post(banana.addBanana);
+    app.route('/cow')
+    .get(cow.getCows)
+    .post(cow.addCow);
 
-    app.route('/banana/:id')
-    .get(banana.getBanana)
-    .delete(banana.deleteBanana);
+    app.route('/cow/:id')
+    .get(cow.getCow)
+    .delete(cow.deleteCow);
 
 };

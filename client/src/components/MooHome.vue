@@ -33,7 +33,7 @@ export default {
         msg: String
     },
     created() {
-        fetch('http://localhost:3000/banana').then(response => response.json()).then(data => console.log(data));
+        fetch('http://localhost:3000/cow').then(response => response.json()).then(data => console.log(data));
     }
 };
 </script>
