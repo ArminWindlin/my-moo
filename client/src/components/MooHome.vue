@@ -22,6 +22,7 @@ export default {
         msg: String
     },
     created() {
+        console.log(this.$myGlobalVariable);
         fetch('http://localhost:3000/cow').then(response => response.json()).then(data => this.cows = data);
     }
 };
