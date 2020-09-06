@@ -1,24 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <moo-home msg="My Moo Home"/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import MooHome from './components/MooHome.vue'
 
 export default {
-  name: 'App',
-  components: {
-      MooHome
-  }
+  name: 'App'
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Verdana, Geneva, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
