@@ -1,7 +1,6 @@
 <template>
   <div class="hello">
     <img alt="Vue logo" src="../assets/logo.png">
-    <h1>{{ msg }}</h1>
     <h3>My Cows</h3>
     <div v-for="cow in cows"
          :key="cow.dateOfBirth"
@@ -19,9 +18,6 @@ export default {
             cows: []
         };
     },
-    props: {
-        msg: String
-    },
     created() {
         console.log(this.$myGlobalVariable);
         fetch('http://localhost:3000/cow').then(response => response.json()).then(data => this.cows = data);
@@ -29,8 +25,7 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
   .cow {
     margin: 5px 0;
   }
