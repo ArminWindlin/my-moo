@@ -5,7 +5,7 @@ on:
     branches: [ develop ]
 
 jobs:
-  build:
+  build-and-deploy:
 
     runs-on: ubuntu-latest
 
@@ -21,15 +21,6 @@ jobs:
     - name: build
       run: npm run build:client
 
-  deploy:
-    needs: build
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        persist-credentials: false
     - name: deploy 🚀
       uses: JamesIves/github-pages-deploy-action@3.6.0
       with:
