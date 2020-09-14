@@ -14,5 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: install dependencides
+        run: npm run ci:client
+
       - name: run lint
         run: npm run lint:client
