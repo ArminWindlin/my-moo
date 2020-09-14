@@ -25,7 +25,8 @@ jobs:
     needs: build
 
     runs-on: ubuntu-latest
-
+    
+    steps:
     - name: deploy
       uses: JamesIves/github-pages-deploy-action@3.6.1
       with:
