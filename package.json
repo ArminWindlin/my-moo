@@ -12,6 +12,6 @@
     "serve:server": "cd server && npm run serve",
     "serve": "npm-run-all -l -p serve:client serve:server"
   },
-  "author": "Armin Windlin, Marc Knipp",
+  "author": "Armin Windlin, Marc Knipp, Manuel Borelli",
   "license": "ISC"
 }
