@@ -14,4 +14,4 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: run lint
-          run: npm lint:client
+          run: npm run lint:client
