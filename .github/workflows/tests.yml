@@ -8,10 +8,11 @@ on:
 
 jobs:
   linting:
+
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
 
       - name: run lint
-          run: npm run lint:client
+        run: npm run lint:client
