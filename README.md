@@ -1,3 +1,24 @@
-# my moo
+# vue-test
 
-![moo](https://image.jimcdn.com/app/cms/image/transf/dimension=202x10000:format=png/path/s139f0810ea538a4c/image/i416672e155bf41d0/version/1477417549/image.png)
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
