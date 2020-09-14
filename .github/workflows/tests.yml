@@ -1,0 +1,10 @@
+name: My Moo - Testing
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  linting:

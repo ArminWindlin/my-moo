@@ -1,0 +1,8 @@
+name: My Moo - CD - Server
+
+on:
+  push:
+    branches: [ develop ]
+
+jobs:
+  deployement:

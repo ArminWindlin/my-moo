@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build:client": "cd client && npm run build",
     "serve:client": "cd client && npm run serve",
     "serve:server": "cd server && npm run serve",
     "serve": "npm-run-all -l -p serve:client serve:server"
