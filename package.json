@@ -1,0 +1,17 @@
+{
+  "name": "my-moo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:client": "cd client && npm install",
+    "ci:client": "cd client && npm ci",
+    "lint:client": "cd client && npm run lint",
+    "build:client": "cd client && npm run build",
+    "serve:client": "cd client && npm run serve",
+    "serve:server": "cd server && npm run serve",
+    "serve": "npm-run-all -l -p serve:client serve:server"
+  },
+  "author": "Armin Windlin, Marc Knipp",
+  "license": "ISC"
+}
