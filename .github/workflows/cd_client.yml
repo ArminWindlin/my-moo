@@ -20,3 +20,16 @@ jobs:
       run: npm run ci:client
     - name: build
       run: npm run build:client
+
+  deploy:
+    needs: build
+
+    runs-on: ubuntu-latest
+
+    - name: deploy
+      uses: JamesIves/github-pages-deploy-action@3.6.1
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: client/dist
+        CLEAN: true # Automatically remove deleted files from the deploy branch
