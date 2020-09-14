@@ -17,6 +17,6 @@ jobs:
       with:
         node-version: 12.x
     - name: install dependencides
-      run: npm ci:client
+      run: npm run ci:client
     - name: build
       run: npm run build:client
