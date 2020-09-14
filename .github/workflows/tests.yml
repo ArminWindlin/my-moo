@@ -11,3 +11,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: run lint
+          run: npm lint:client

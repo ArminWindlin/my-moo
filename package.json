@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "install:client": "cd client && npm install",
+    "ci:client": "cd client && npm ci",
+    "lint:client": "cd client && npm run lint",
     "build:client": "cd client && npm run build",
     "serve:client": "cd client && npm run serve",
     "serve:server": "cd server && npm run serve",
