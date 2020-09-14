@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <img alt="Vue logo" src="../assets/logo.png">
-    <h3>My Cows</h3>
+    <h3>My amazing Cows</h3>
     <div v-for="cow in cows"
          :key="cow.dateOfBirth"
          class="cow">
