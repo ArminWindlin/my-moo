@@ -6,3 +6,7 @@ on:
 
 jobs:
   deployement:
+
+    runs-on: ubuntu-latest
+
+    steps:

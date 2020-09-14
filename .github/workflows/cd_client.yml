@@ -16,6 +16,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
+    - name: vue cli
+      run: npm install -g @vue/cli
     - name: npm install
       run: npm install
     - name: build
