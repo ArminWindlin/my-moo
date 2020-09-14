@@ -13,6 +13,10 @@ const router = createRouter({
         {
             path: '/moo',
             component: Home
+        },
+        {
+            path: '/my-moo',
+            component: Home
         }
     ]
 });
