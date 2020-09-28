@@ -1,4 +1,4 @@
-name: My Moo - CD - Server
+name: CD - Server
 
 on:
   push:
