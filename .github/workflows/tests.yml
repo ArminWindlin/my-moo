@@ -20,14 +20,8 @@ jobs:
       - name: run lint
         run: npm run lint:client
 
-      - name: Setup sonarqube
-        uses: warchant/setup-sonar-scanner@v1
-      - name: Run sonarqube
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@master
         env:
-          # to get access to secrets.SONAR_TOKEN, provide GITHUB_TOKEN
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: sonar-scanner -X
-          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
-          -Dsonar.organization=ArminWindlin
-          -Dsonar.host.url=https://sonarcloud.io/
-          -Dsonar.projectKey=my-moo-sonar
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
