@@ -21,17 +21,18 @@ jobs:
         run: npm run lint:client
 
       - name: dependency check
-        - uses: AppThreat/dep-scan-action@master
-          env:
-            VULNDB_HOME: ${{ github.workspace }}/db
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            
+        uses: AppThreat/dep-scan-action@master
+        env:
+          VULNDB_HOME: ${{ github.workspace }}/db
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Generate Lighthouse Report
-          uses: justinribeiro/lighthouse-action@master
-          with:
-            secret: ${{ secrets.GITHUB_TOKEN }}
-            url: https://arminwindlin.github.io/my-moo/
-            wptConnectionSpeed: threegfast
+        uses: justinribeiro/lighthouse-action@master
+        with:
+          secret: ${{ secrets.GITHUB_TOKEN }}
+          url: https://arminwindlin.github.io/my-moo/
+          wptConnectionSpeed: threegfast
+          
       - name: Saving Lighthouse Audit Artifacts
           uses: actions/upload-artifact@master
           with:
