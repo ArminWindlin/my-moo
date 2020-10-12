@@ -4,9 +4,11 @@ const { Schema } = mongoose;
 const CowSchema = new Schema({
     name: {
         type: String,
-        required: 'enter the name of the cow'
+        required: 'enter the name of the cow',
+        unique: true,
+        index: true,
     },
-    earCoder: String,
+    earCode: String,
     breed: String,
     comment: String,
     weight: Number,

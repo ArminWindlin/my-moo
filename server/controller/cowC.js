@@ -28,6 +28,17 @@ exports.getCow = (req, res, next) => {
     });
 };
 
+// Method to get a single cow to database
+exports.updateWeight = (req, res, next) => {
+    if (!req.body.weight) res.status(400).send('property "weight" is missing');
+    if (isNaN(req.body.weight)) res.status(400).send('property "weight" has to be a number');
+    Cow.updateOne({ _id: req.params.id }, { weight: req.body.weight }, (err, cow) => {
+        if (err) return next(err);
+        res.send(cow);
+        console.info('Sent the requested cow!');
+    });
+};
+
 // Method to delete a single cow to database
 exports.deleteCow = (req, res, next) => {
     Cow.remove({ _id: req.params.id }, (err) => {
