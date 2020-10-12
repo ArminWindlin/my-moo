@@ -30,8 +30,8 @@ exports.getCow = (req, res, next) => {
 
 // Method to get a single cow to database
 exports.updateWeight = (req, res, next) => {
-    if (!req.body.weight) res.status(400).send('property "weight" is missing');
-    if (isNaN(req.body.weight)) res.status(400).send('property "weight" has to be a number');
+    if (!req.body.weight) return res.status(400).send('property "weight" is missing');
+    if (isNaN(req.body.weight)) return res.status(400).send('property "weight" has to be a number');
     Cow.updateOne({ _id: req.params.id }, { weight: req.body.weight }, (err, cow) => {
         if (err) return next(err);
         res.send(cow);
