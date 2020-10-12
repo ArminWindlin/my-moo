@@ -1,4 +1,4 @@
-name: My Moo - Testing
+name: Testing
 
 on:
   push:
@@ -25,12 +25,6 @@ jobs:
         env:
           VULNDB_HOME: ${{ github.workspace }}/db
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate Lighthouse Report
-        uses: justinribeiro/lighthouse-action@master
-        with:
-          url: https://arminwindlin.github.io/my-moo/
-          wptConnectionSpeed: threegfast
 
   sonar:
 
