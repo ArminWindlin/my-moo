@@ -24,6 +24,6 @@ app.use((err, req, res, next) => {
     console.log('ERROR:' + err.message);
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`App listening at http://localhost:${port}`);
 });
