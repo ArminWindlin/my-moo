@@ -8,10 +8,8 @@ const port = 3000;
 
 // Setup database connection
 if(process.env.NODE_ENV === 'production'){
-private database(): void {
         mongoose.connect(`mongodb+srv://TestUser:${process.env.MONGO_PW}@eoncluster-deeoa.gcp.mongodb.net/test?retryWrites=true&w=majority`,
             {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true});
-    }
 }else{
 mongoose.connect('mongodb://localhost/my-moo',
     { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
