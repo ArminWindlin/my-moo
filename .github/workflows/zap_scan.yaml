@@ -14,4 +14,4 @@ jobs:
       - name: ZAP Scan
         uses: zaproxy/action-baseline@v0.3.0
         with:
-          target: 'https://arminwindlin.github.io/'
+          target: 'https://my-moo.herokuapp.com'
