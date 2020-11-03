@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from './components/MooHome';
+import AnalyticsTest from './components/AnalyticsTest';
 
 const routerHistory = createWebHistory();
 
@@ -16,7 +17,13 @@ const router = createRouter({
         },
         {
             path: '/my-moo',
+            name: 'home',
             component: Home
+        },
+        {
+            path: '/my-moo/analytics-test',
+            name: 'analyticsTest',
+            component: AnalyticsTest
         }
     ]
 });
