@@ -7,8 +7,15 @@ const app = express();
 const port = 3000;
 
 // Setup database connection
-mongoose.connect('mongodb://localhost/my-moo',
-    { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
+console.log('---------------------')
+console.log(process.env.DOCKER_DB)
+if (process.env.DOCKER_DB){
+    mongoose.connect(process.env.DOCKER_DB,
+        { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
+} else {
+    mongoose.connect('mongodb://localhost:27018/my-moo',
+        { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
+}
 
 // Middleware
 app.use(cors());

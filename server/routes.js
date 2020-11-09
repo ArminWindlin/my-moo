@@ -13,4 +13,8 @@ exports.routes = (app) => {
     app.route('/cow/updateWeight/:id')
         .put(cow.updateWeight);
 
+    app.route('/')
+        .get((req,res) =>
+          res.send('my moo is running'));
+
 };
