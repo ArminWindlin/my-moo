@@ -21,6 +21,11 @@ const router = createRouter({
             component: Home
         },
         {
+            path: '/analytics-test',
+            name: 'analyticsTest',
+            component: AnalyticsTest
+        },
+        {
             path: '/my-moo/analytics-test',
             name: 'analyticsTest',
             component: AnalyticsTest

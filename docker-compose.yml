@@ -1,0 +1,25 @@
+version: "3"
+services:
+  server:
+    container_name: my-moo-node-server
+    restart: always
+    build: server
+    ports:
+      - "3000:3000"
+    depends_on:
+      - database
+    environment:
+      - DOCKER_DB_URL=mongodb://database:27017/my-moo
+  database:
+    container_name: database
+    image: mongo
+    ports:
+      - "27018:27017"
+  client:
+    container_name: my-moo-vue-client
+    restart: always
+    build: client
+    ports:
+      - "8080:8080"
+    environment:
+      - DOCKER_SERVER_URL=http://server:3000

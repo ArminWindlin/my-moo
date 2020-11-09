@@ -7,10 +7,8 @@ const app = express();
 const port = 3000;
 
 // Setup database connection
-console.log('---------------------')
-console.log(process.env.DOCKER_DB)
-if (process.env.DOCKER_DB){
-    mongoose.connect(process.env.DOCKER_DB,
+if (process.env.DOCKER_DB_URL){
+    mongoose.connect(process.env.DOCKER_DB_URL,
         { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
 } else {
     mongoose.connect('mongodb://localhost:27018/my-moo',
