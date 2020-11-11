@@ -22,4 +22,4 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - DOCKER_SERVER_URL=http://server:3000
+      - VUE_APP_DOCKER_SERVER_URL=http://server:3000

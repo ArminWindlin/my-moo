@@ -2,9 +2,9 @@ name: Zap Scan
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ ]
   pull_request:
-    branches: [ develop ]
+    branches: [ ]
 
 jobs:
   zap_scan:

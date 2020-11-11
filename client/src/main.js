@@ -13,8 +13,8 @@ app.config.globalProperties.$myGlobalVariable = 'test';
 app.config.globalProperties.$api = 'http://localhost:3000/';
 if (process.env.NODE_ENV === 'production')
   app.config.globalProperties.$api = 'https://my-moo.herokuapp.com/';
-if (process.env.DOCKER_SERVER_URL)
-  app.config.globalProperties.$api = process.env.DOCKER_SERVER_URL;
+if (process.env.VUE_APP_DOCKER_SERVER_URL)
+  app.config.globalProperties.$api = process.env.VUE_APP_DOCKER_SERVER_URL;
 
 app.use(router);
 
