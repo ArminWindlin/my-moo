@@ -1,4 +1,5 @@
 const cow = require('./controller/cowC');
+const prometheus = require('./controller/prometheusC');
 
 exports.routes = (app) => {
 
@@ -16,5 +17,9 @@ exports.routes = (app) => {
     app.route('/')
         .get((req,res) =>
           res.send('my moo is running'));
+
+    /* Prometheus */
+    app.route('/metrics')
+        .get(prometheus.getMetrics)
 
 };

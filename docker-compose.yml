@@ -15,6 +15,8 @@ services:
     image: mongo
     ports:
       - "27018:27017"
+    volumes:
+    - mongo-db:/database
   client:
     container_name: my-moo-vue-client
     restart: always
@@ -23,3 +25,16 @@ services:
       - "8080:8080"
     environment:
       - VUE_APP_DOCKER_SERVER_URL=http://server:3000
+  prometheus:
+    container_name: prometheus
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./:/etc/prometheus
+      - prometheus-data:/prometheus
+    command: --web.enable-lifecycle --config.file=/etc/prometheus/prometheus.yml
+
+volumes:
+  prometheus-data:
+  mongo-db:
