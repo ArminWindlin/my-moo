@@ -11,7 +11,7 @@ if (process.env.DOCKER_DB_URL){
     mongoose.connect(process.env.DOCKER_DB_URL,
         { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
 } else {
-    mongoose.connect('mongodb://localhost:27018/my-moo',
+    mongoose.connect('mongodb://localhost/my-moo',
         { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
 }
 

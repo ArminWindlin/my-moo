@@ -19,3 +19,5 @@ pnpm-debug.log*
 
 # Testing outpu
 jmeter_report.csv
+
+key.json

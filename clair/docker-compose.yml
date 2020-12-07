@@ -1,0 +1,29 @@
+version: "3.3"
+services:
+  postgres-db:
+    image: postgres:9.6
+    environment:
+      POSTGRES_PASSWORD:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5432:5432"
+  clair:
+    image: quay.io/coreos/clair:latest
+    restart: unless-stopped
+    ports:
+      - "6060:6060"
+      - "6061:6061"
+    environment:
+      CLAIR_MODE: combo
+      CLAIR_CONF: /etc/clair/config.yaml
+    volumes:
+      - "./config.yaml:/etc/clair/config.yaml"
+    depends_on:
+      - postgres-db
+    command: ["-config", "/etc/clair/config.yaml"]
+  klar:
+    container_name: klar
+    build: ./
+    ports:
+      - "7777:7777"
+
