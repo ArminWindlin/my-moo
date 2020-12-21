@@ -35,6 +35,18 @@ services:
       - prometheus-data:/prometheus
     command: --web.enable-lifecycle --config.file=/etc/prometheus/prometheus.yml
 
+  grafana:
+    image: grafana/grafana:latest
+    container_name: monitoring_grafana
+    restart: unless-stopped
+    ports:
+      - 9000:3000
+    links:
+      - prometheus:prometheus
+    volumes:
+      - grafana-data:/var/lib/grafana
+
 volumes:
   prometheus-data:
   mongo-db:
+  grafana-data:
